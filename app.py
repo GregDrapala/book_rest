@@ -59,11 +59,11 @@ def update_book(book_id):
 
 @app.errorhandler(404)
 def not_found(error):
-    return make_response(jsonify({'error': 'Not found', 'status_code': 404}), 404)
+    return make_response(jsonify({'error': 'Not found, the server could not find the requested website' , 'status_code': 404}), 404)
 
 @app.errorhandler(400)
 def bad_request(error):
-    return make_response(jsonify({'error': 'Bad request', 'status_code': 400}), 400)
+    return make_response(jsonify({'error': 'Bad request, The browser (or proxy) sent a request that this server could not understand.', 'status_code': 400}), 400)
 
 
 if __name__ == "__main__":
